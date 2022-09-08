@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background: blanchedalmond;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.output {
+  height: 10rem;
+}
+
+h1 {
+  border: 3rem black;
+  background: rgb(99, 77, 132);
+  color: rgb(233, 69, 96);
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem;
+  text-shadow: 2px 2px black;
+  margin: 3rem;
+  padding: 1rem;
+}
+
+#passwordOutput {
+  font-size: 4rem;
+  text-align: center;
+  /* background: rgb(99, 77, 132);
+  padding: ; */
+}
+
+#passwordSpelling {
+  font-size: 1rem;
+  margin: 2rem;
+}
+
+.specialCharButtons {
+  text-align: center;
+  border: 1px black;
+  padding: blue;
+}
+
+.specialCharButtons button {
+  background: rgb(99, 77, 132);
+  color: white;
+  border: darkviolet;
+  text-shadow: 2px 2px black;
+}
+
+.currentChar {
+  height: 2rem;
+}
+
+#currentChar {
+  font: 2rem bold;
+  display: flex;
+  text-align: center;
+  border: 2px;
+  /* width: min-content; */
+  justify-content: center;
+  margin: 2rem;
+}
+
+.inputParams {
+  text-align: center;
+}
+
+.pLength {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#generate {
+  font-size: 2rem;
+  font: bold;
+  background: rgb(99, 77, 132);
+  color: rgb(233, 69, 96);
+  text-shadow: 2px 2px black;
+  margin: 2rem;
+}
