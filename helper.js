@@ -23,13 +23,13 @@ const generatePhonetics = (password, specialChar) => {
   let milPhonetics = 'Capital ';
   for (const key in milAlph) {
     if (password[0] === key) {
-      milPhonetics += milAlph[key];
+      milPhonetics += `${milAlph[key]},`;
     }
   }
   for (let i = 1; i < password.length; i++) {
     for (let key in milAlph) {
       if (password[i].toUpperCase() === key) {
-        milPhonetics += ` ${milAlph[key].toLowerCase()}`;
+        milPhonetics += ` ${milAlph[key].toLowerCase()},`;
       }
     }
   }

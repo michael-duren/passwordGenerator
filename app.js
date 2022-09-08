@@ -41,10 +41,20 @@ const getLength = document.querySelector('#passwordLength');
 const generateButton = document.querySelector('#generate');
 generateButton.addEventListener('click', () => {
   const passwordLength = getLength.value;
-  const randomPassword = generatePassword(passwordLength, specialChar);
+  var randomPassword = generatePassword(passwordLength, specialChar);
   const phonetics = generatePhonetics(randomPassword, specialChar);
   const passwordOutput = document.querySelector('#passwordOutput');
   passwordOutput.innerText = randomPassword;
   const phoneticsOutput = document.querySelector('#passwordSpelling');
   phoneticsOutput.innerText = phonetics;
+});
+
+// Copy paste button
+const copyClipboardButton = document.querySelector('#copyClipboard');
+copyClipboardButton.addEventListener('click', async () => {
+  const password = document.querySelector('#passwordOutput');
+  const copyText = password.innerText;
+
+  await navigator.clipboard.writeText(copyText);
+  alert(`Copied ${copyText}`);
 });
