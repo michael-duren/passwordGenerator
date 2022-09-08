@@ -72,6 +72,7 @@ const milAlph = {
   E: 'Echo',
   F: 'Foxtrot',
   G: 'Golf',
+  H: 'Hotel',
   I: 'India',
   J: 'Juliet',
   K: 'Kilo',
