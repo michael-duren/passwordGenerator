@@ -54,7 +54,8 @@ const copyClipboardButton = document.querySelector('#copyClipboard');
 copyClipboardButton.addEventListener('click', async () => {
   const password = document.querySelector('#passwordOutput');
   const copyText = password.innerText;
+  const copyNotification = document.querySelector('#copyNotification');
 
   await navigator.clipboard.writeText(copyText);
-  alert(`Copied ${copyText}`);
+  copyNotification.innerText = `Copied ${copyText}`;
 });
