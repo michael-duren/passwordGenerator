@@ -19,23 +19,19 @@ const generatePassword = (passwordLength, specialChar) => {
   return password;
 };
 
-const generatePhonetics = (password) => {
-  let milPhonetics = '';
+const generatePhonetics = (password, specialChar) => {
+  let milPhonetics = 'Capital ';
   for (const key in milAlph) {
-    // console.log(`${key}: ${milAlph[key]}`);
     if (password[0] === key) {
-      milPhonetics += `Capital ${milAlph[key]}`;
+      milPhonetics += milAlph[key];
     }
   }
-
-  for (let char of password) {
-    if (!char === char.toUpperCase()) {
-      for (const key in milAlph) {
-        if (char === key) {
-          milPhonetics += milAlph[key];
-        }
+  for (let i = 1; i < password.length; i++) {
+    for (let key in milAlph) {
+      if (password[i].toUpperCase() === key) {
+        milPhonetics += ` ${milAlph[key].toLowerCase()}`;
       }
     }
   }
-  return milPhonetics;
+  return `${milPhonetics} ${specialChar}`;
 };

@@ -1,9 +1,4 @@
-// const { generateRandomLetter, generateRandomNumber } = require('./helper');
-
-// let passwordLength = 8;
-// let specialChar = '!';
-
-let specialChar = '';
+let specialChar = '!';
 
 const curChar = document.querySelector('#currentChar');
 
@@ -47,7 +42,7 @@ const generateButton = document.querySelector('#generate');
 generateButton.addEventListener('click', () => {
   const passwordLength = getLength.value;
   const randomPassword = generatePassword(passwordLength, specialChar);
-  const phonetics = generatePhonetics(randomPassword);
+  const phonetics = generatePhonetics(randomPassword, specialChar);
   const passwordOutput = document.querySelector('#passwordOutput');
   passwordOutput.innerText = randomPassword;
   const phoneticsOutput = document.querySelector('#passwordSpelling');
