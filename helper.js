@@ -8,10 +8,10 @@ const generateRandomNumber = () => {
 const generatePassword = (passwordLength, specialChar) => {
   let password = '';
   password += upperCase[generateRandomLetter()];
-  for (let i = 0; i < passwordLength - 5; i++) {
+  for (let i = 0; i < passwordLength - 6; i++) {
     password += lowerCase[generateRandomLetter()];
   }
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     password += numbers[generateRandomNumber()];
   }
   password += specialChar;
