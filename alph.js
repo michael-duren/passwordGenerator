@@ -56,6 +56,7 @@ const upperCase = [
 ];
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const milAlph = {
+  0: 'zero',
   1: 'one',
   2: 'two',
   3: 'three',
